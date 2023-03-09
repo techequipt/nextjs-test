@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 import './progress.css';
 
-import graphicIcon from '../public/graphic.svg';
-import settingIcon from '../public/setting.svg';
+import BannerGraphic from '../public/graphic.svg';
+import IconSetting from '../public/setting.svg';
 
 interface ProgressProps {
   title: string;
@@ -59,7 +59,7 @@ export const Progress = ({
   return (
     <div className={`container d-flex ${color}`}>
       <div className="graphic">
-        <Image src={graphicIcon} alt={''} />
+        <BannerGraphic />
       </div>
       <div className='info'>
         <h3>{title}</h3>
@@ -72,7 +72,7 @@ export const Progress = ({
         <div className="progress d-flex">
           <div className="w-100">
             <div className="header">
-              <Image src={settingIcon} alt={''} />
+              <IconSetting />
               <span>In Progress</span>
             </div>
             <div className="progress-bar">

@@ -23,7 +23,7 @@
   margin-right: 39px;
 }
 
-.container .graphic img {
+.container .graphic svg {
   width: 133px;
   height: 136px;
 }
@@ -51,7 +51,7 @@
   margin-bottom: 12px;
 }
 
-.progress .header img {
+.progress .header svg {
   margin-right: 5px;
   fill: #150F2B;
 }
@@ -100,7 +100,7 @@
   padding: 15px;
 }
 
-.dark .progress .header img {
+.dark .progress .header svg {
   fill: #E2E8F0;
 }
 
@@ -136,7 +136,7 @@
     margin: auto;
     margin-bottom: 15px;
   }
-  .container .graphic img {
+  .container .graphic svg {
     width: 100%;
     height: auto;
   }
