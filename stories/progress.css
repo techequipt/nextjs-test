@@ -1,0 +1,143 @@
+.w-100 {
+  width: 100%;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.container {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #150F2B;
+}
+
+.container h3 {
+  margin-top: 0;
+}
+
+.container .graphic {
+  margin-right: 39px;
+}
+
+.container .graphic svg {
+  width: 133px;
+  height: 136px;
+}
+
+.container .progress-container {
+  width: 33%;
+}
+
+.container .info {
+  width: 53%;
+}
+
+.info span {
+  display: block;
+}
+
+.info .description {
+  padding-top: 16px;
+}
+
+.progress .header {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.progress .header svg {
+  margin-right: 5px;
+  fill: #150F2B;
+}
+
+.progress .progress-bar {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 50px;
+  background-color: #BBBAC0;
+  height: 10px;
+}
+
+.progress .progress-bar .current-progress {
+  border-radius: 50px;
+  background-color: #FEBA69;
+  height: 10px;
+}
+
+.progress .progress-info {
+  margin-top: 25px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.text-grey {
+  color: #72707B;
+}
+
+.light {
+  border: 1px solid #BCBBC0;
+  border-radius: 25px;
+  padding: 15px;
+}
+
+.dark {
+  background-color: #1E293B;
+  border: 1px solid #353F4F;
+  border-radius: 25px;
+  color: #E2E8F0;
+  padding: 15px;
+}
+
+.dark .progress .header svg {
+  fill: #E2E8F0;
+}
+
+.dark .text-grey {
+  color: #77C9F0;
+}
+
+.dark .progress .progress-bar {
+  background-color: #2D4258;
+}
+
+.dark .progress .progress-bar .current-progress {
+  background-color: #38BDF8;
+}
+
+@media only screen and (max-width: 500px) {
+  .info {
+    display: none;
+  }
+  .container .progress-container {
+    width: 100%;
+  }
+  .container .progress-container .progress {
+    justify-content: flex-start;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .container {
+    display: block;
+  }
+  .container .graphic {
+    margin: auto;
+    margin-bottom: 15px;
+  }
+  .container .graphic svg {
+    width: 100%;
+    height: auto;
+  }
+}
