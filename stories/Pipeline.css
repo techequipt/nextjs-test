@@ -1,0 +1,103 @@
+.pipeline {
+    border: solid 1px rgba(118, 104, 104, 0.373);
+    border-radius: 12px;
+    display: block;
+    padding: 16px;
+    margin: 12px;
+    font-family: sans-serif;
+}
+
+.pipeline .left_panel {
+    display: block;
+}
+
+.pipeline .title,
+.pipeline .subTitle {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.left_panel .title {
+    margin-bottom: 24px;
+}
+
+.left_panel .subTitle {
+    margin-bottom: 12px;
+}
+
+.left_panel .description {
+    margin: 0px;
+    font-size: 14px;
+    color: gray;
+}
+
+.right_panel {
+    width: 100%;
+    max-width: 270px;
+}
+
+.right_panel .title {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.right_panel .progress {
+    background: #bbbabf;
+    height: 10px;
+    border-radius: 6px;
+    margin-bottom: 24px;
+}
+
+.right_panel .progress .active {
+    background: #ffba68;
+    border-radius: 6px;
+    height: 10px;
+}
+
+.right_panel .status {
+    display: grid;
+    grid-template-columns: auto 85px;
+}
+
+.right_panel .status .label{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.right_panel .status .value{
+    font-size: 16px;
+    font-weight: 500;
+    color: #757183;
+}
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {...} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .pipeline .left_panel {
+        display: flex;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .pipeline {
+        display: flex;
+        justify-content: space-between;
+        padding: 18px 24px;
+        margin: 24px;
+    }
+
+    .pipeline .title,
+    .pipeline .subTitle {
+        font-size: 18px;
+    }
+
+    .right_panel .title {
+        margin-top: 0px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
