@@ -1,0 +1,222 @@
+.wrapper-pipeline {
+	max-width: 1098px;
+	width: 100%;
+	height: 174px;
+	border-radius: 16px;
+	display: flex;
+	justify-content: space-between;
+}
+.wrapper-pipeline .content-left {
+	display: flex;
+}
+.desktop {
+	display: block;
+}
+.mobile {
+	display: none;
+}
+.wrapper-pipeline .image {
+	margin-top: 20px;
+	margin-left: 32px;
+	background-color: #ffffff;
+}
+
+.wrapper-pipeline .info-pipeline {
+	padding-left: 36px;
+}
+
+.wrapper-pipeline .title {
+	font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+	margin-top: 18px;
+	margin-bottom: 26px;
+	letter-spacing: 0.7px;
+}
+.wrapper-pipeline .sub-title {
+	font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	margin-top: 20px;
+	letter-spacing: 0.4px;
+}
+.wrapper-pipeline .description {
+	padding-top: 16px;
+	font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	letter-spacing: 0.3px;
+	line-height: 20px;
+}
+
+.wrapper-pipeline .progress {
+	padding-top: 18px;
+	font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	margin-right: 38px;
+}
+.wrapper-pipeline .setting {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	letter-spacing: 0.3px;
+}
+
+.wrapper-pipeline .process {
+	height: 10px;
+	width: 220px;
+	border-radius: 8px;
+	margin-top: 14px;
+}
+
+.wrapper-pipeline .percent-process {
+	height: 10px;
+	border-radius: 8px;
+}
+
+.wrapper-pipeline .status {
+	margin-top: 24px;
+	letter-spacing: 0.3px;
+	display: flex;
+	justify-content: space-between;
+}
+.wrapper-pipeline .text-status {
+	width: 65px;
+}
+.wrapper-pipeline .text-time {
+	width: 65px;
+	white-space: nowrap;
+}
+
+.wrapper-pipeline .time-remain {
+	margin-top: 4px;
+	letter-spacing: 0.3px;
+	display: flex;
+	justify-content: space-between;
+	/* padding-right: 12px; */
+}
+
+.wrapper-pipeline--light {
+	background-color: #ffffff;
+	border: 1px solid #d3d2d6;
+	color: #140d29;
+}
+
+.wrapper-pipeline--light .description {
+	color: #9f9ca6;
+}
+
+.wrapper-pipeline--light .icon-setting {
+	color: #140d29;
+}
+
+.wrapper-pipeline--light .process {
+	background-color: #9f9ca6;
+}
+
+.wrapper-pipeline--light .percent-process {
+	background-color: #f8ba74;
+}
+
+.wrapper-pipeline--light .text-status {
+	color: #9f9ca6;
+}
+
+.wrapper-pipeline--light .text-time {
+	color: #9f9ca6;
+}
+
+.wrapper-pipeline--dark {
+	background-color: #000000;
+	border: 1px solid #30363d;
+	color: #ffffff;
+}
+
+.wrapper-pipeline--dark .description {
+	color: #8b949e;
+}
+
+.wrapper-pipeline--dark .icon-setting {
+	color: #ffffff;
+}
+
+.wrapper-pipeline--dark .process {
+	background-color: #563d7c;
+}
+
+.wrapper-pipeline--dark .percent-process {
+	background-color: #31786c;
+}
+
+.wrapper-pipeline--dark .text-status {
+	color: #8b949e;
+}
+
+.wrapper-pipeline--dark .text-time {
+	color: #8b949e;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+	.wrapper-pipeline {
+		width: 100%;
+		height: auto;
+		border-radius: 8px;
+		display: block;
+	}
+	.wrapper-pipeline .image {
+		width: 80px;
+		height: 80px;
+		margin-top: 16px;
+		margin-left: 12px;
+	}
+	.wrapper-pipeline .info-pipeline {
+		padding-left: 16px;
+	}
+	.wrapper-pipeline .title {
+		font-size: 18px;
+		margin-top: 28px;
+		margin-bottom: 8px;
+	}
+	.wrapper-pipeline .sub-title {
+		font-size: 16px;
+	}
+	.desktop {
+		display: none;
+	}
+	.mobile {
+		display: block;
+	}
+	.wrapper-pipeline .description {
+		font-size: 14px;
+		line-height: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 8px;
+	}
+	.wrapper-pipeline .progress {
+		font-size: 14px;
+		padding: 20px 16px;
+		margin-right: 0px;
+	}
+	.wrapper-pipeline .process {
+		width: 100%;
+	}
+	.wrapper-pipeline .status {
+		margin-top: 16px;
+	}
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 641px) and (max-width: 1024px) {
+	.wrapper-pipeline {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	.wrapper-pipeline .progress {
+		padding: 32px;
+		margin-right: 0px;
+	}
+	.wrapper-pipeline .process {
+		width: 100%;
+	}
+}
