@@ -1,0 +1,110 @@
+.text-bold {
+    font-weight: bold;
+}
+
+.text-gray{
+    color: #a5a5a6;
+}
+
+.storybook-card-info{
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #150F2B;
+    border-radius: 25px;
+    padding: 15px;
+    display: flex;
+}
+
+.storybook-card-info h3 {
+    margin-top: 0;
+}
+
+.storybook-card-info .graphic {
+    margin-right: 30px;
+}
+
+.storybook-card-info .info {
+    width: 55%;
+}
+
+.storybook-card-info .info .description {
+    font-size: 15px;
+}
+
+.storybook-card-info .progress {
+    width: 35%;
+}
+
+.progress .header {
+    align-items: center;
+    font-weight: 800;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.progress .header span {
+    margin-left: 10px;
+}
+
+.progress .progress-bar {
+    border-radius: 50px;
+    background-color: #a5a5a6;
+}
+
+.progress .progress-bar .current-value {
+    border-radius: 50px;
+    background-color: #f5b86e;
+    height: 10px;
+}
+
+.progress .progress-info {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.light {
+    border: 1px solid #dadada;
+}
+
+/* Define Dark Color */
+.dark {
+    background-color: #1E293B;
+    border: 1px solid #353F4F;
+    color: #fff;
+}
+
+.dark .text-gray {
+    color: #15b2f6;
+}
+
+.dark .progress .progress-bar {
+    background-color: #253647;
+}
+
+.dark .progress .progress-bar .current-value {
+    background-color: #15b2f6;
+}
+
+/* Define responsive */
+
+@media screen and (max-width: 500px) {
+    .info {
+        display: none;
+    }
+
+    .storybook-card-info .progress {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .storybook-card-info {
+        display: block;
+    }
+
+    .storybook-card-info .graphic {
+        margin: auto;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+}
