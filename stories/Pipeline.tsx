@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import dayjs from './lib/dayjs'
-import { HiCog } from 'react-icons/hi'
+import { HiCog, HiBadgeCheck } from 'react-icons/hi'
+import { ProgressBar } from './ProgressBar'
 
 export type PipelineProps = {
   name: string,
@@ -9,6 +10,7 @@ export type PipelineProps = {
   stepDescription?: string,
   stepHelpTexts?: string[],
   image?: ReactNode,
+  progressPercent?: number,
 }
 
 export function Pipeline({
@@ -18,6 +20,7 @@ export function Pipeline({
   stepDescription,
   status,
   etaSeconds,
+  progressPercent,
 }: PipelineProps) {
   const isInProgress = status !== 'done'
 
@@ -44,21 +47,24 @@ export function Pipeline({
           ))}
         </ul>
       </div>
-      <div className='pipeline__progress sm:basis-60'>
-        <h4 className='flex items-center gap-2 text-sm sm:text-base'>
-          <HiCog className='motion-safe:animate-spin' />
-          <strong>{isInProgress ? 'In Progress' : 'Done'}</strong>
+      <div className='pipeline__progress sm:basis-64'>
+        <h4 className='flex items-center gap-2 text-sm sm:text-base mb-3'>
+          {isInProgress
+            ? (<><HiCog className='motion-safe:animate-spin' /><strong>In Progress</strong></>)
+            : (<><HiBadgeCheck className='text-green-600' /><strong>Completed</strong></>)
+          }
         </h4>
+        {progressPercent && (<div className='w-60'><ProgressBar progressPercent={progressPercent} /></div>)}
         <ul className='list-none p-0 mt-4 text-xs md:text-sm lg:text-base'>
           <li className='flex'>
             <strong className='flex-none basis-28 md:basis-32 lg:basis-36'>Status:</strong>
-            <strong className='text-slate-500 dark:text-slate-300'>{status}</strong>
+            <strong className='text-slate-500 dark:text-slate-300 capitalize'>{status}</strong>
           </li>
           {etaSeconds && (
             <li className='flex mt-1'>
               <strong className='flex-none basis-28 md:basis-32 lg:basis-36'>Time Remaining:</strong>
               <strong className='text-slate-500 dark:text-slate-300'>
-                {dayjs.duration(etaSeconds, 'seconds').humanize().replace(/\b(?:a|an)\b/, '1')}
+                {dayjs.duration(etaSeconds, 'seconds').humanize().replace(/(?:a|an) (s|m|h)/, '1 $1')}
               </strong>
             </li>
           )}

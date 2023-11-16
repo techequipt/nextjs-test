@@ -22,7 +22,18 @@ export const InProgress: Story = {
       'We will send you an email when setup is complete.',
     ],
     image: <Image alt='pipeline image' src={pipelineExampleImageSrc} />,
-    status: 'Building',
+    status: 'building',
     etaSeconds: 3600,
+    progressPercent: 50,
+  },
+}
+
+export const Completed: Story = {
+  args: {
+    name: 'Pipeline Name',
+    stepDescription: 'Your pipeline is completed',
+    image: <Image alt='pipeline image' src={pipelineExampleImageSrc} />,
+    status: 'done',
+    progressPercent: 100,
   },
 }
