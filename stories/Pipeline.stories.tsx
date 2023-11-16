@@ -8,9 +8,6 @@ const meta: Meta<typeof Pipeline> = {
   component: Pipeline,
   tags: ['autodocs'],
   argTypes: {},
-  parameters: {
-    layout: 'centered',
-  },
 }
 
 export default meta
@@ -25,5 +22,7 @@ export const InProgress: Story = {
       'We will send you an email when setup is complete.',
     ],
     image: <Image alt='pipeline image' src={pipelineExampleImageSrc} />,
+    status: 'Building',
+    etaSeconds: 3600,
   },
 }
