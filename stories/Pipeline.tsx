@@ -52,7 +52,7 @@ export const Pipeline = ({
 }: PipelineProps) => {
 
   // variable for
-  const pipelineStatus = totalTimeInSecond - progressTimeInSecond > 0 ? 'Not started' : 'Completed'
+  const pipelineStatus = totalTimeInSecond - progressTimeInSecond > 0 ? 'Building' : 'Completed'
   const progressMessage = pipelineStatus === 'Completed' ? completedMessage : inProgressMessage;
 
   return (
